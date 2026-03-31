@@ -2966,9 +2966,9 @@ do
     });
 
   --  Library:Create('UICorner', {
-     --   CornerRadius = UDim.new(0, 4),
-     --   Parent = WatermarkInner
-   -- });
+       -- CornerRadius = UDim.new(0, 4),
+      --  Parent = WatermarkInner
+  --  });
 
    Library:AddToRegistry(WatermarkInner, {
         BorderColor3 = 'AccentColor';
@@ -3018,10 +3018,10 @@ do
      --   Parent = Library.Watermark
    -- });
 
-   -- local BackgroundCorner = Library:Create('UICorner', {
-      --  CornerRadius = UDim.new(0, 4),
-      --  Parent = WatermarkInner
-    --});
+    local BackgroundCorner = Library:Create('UICorner', {
+        CornerRadius = UDim.new(0, 4),
+        Parent = WatermarkInner
+    });
 
     local KeybindOuter = Library:Create('Frame', {
         AnchorPoint = Vector2.new(0, 0.5);
