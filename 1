@@ -447,10 +447,10 @@ do
             Parent = ToggleLabel;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = DisplayFrame
-        });
+        --Library:Create('UICorner', {
+         --   CornerRadius = UDim.new(0, 4),
+          --  Parent = DisplayFrame
+      --  });
 
         -- Transparency image taken from https://github.com/matas3535/SplixPrivateDrawingLibrary/blob/main/Library.lua cus i'm lazy
         local CheckerFrame = Library:Create('ImageLabel', {
@@ -494,10 +494,10 @@ do
             Parent = PickerFrameOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = PickerFrameInner
-        });
+      --  Library:Create('UICorner', {
+         --   CornerRadius = UDim.new(0, 4),
+       --     Parent = PickerFrameInner
+       -- });
 
         local Highlight = Library:Create('Frame', {
             BackgroundColor3 = Library.AccentColor;
@@ -524,10 +524,10 @@ do
             Parent = SatVibMapOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = SatVibMapInner
-        });
+       -- Library:Create('UICorner', {
+          --  CornerRadius = UDim.new(0, 4),
+           -- Parent = SatVibMapInner
+      --  });
 
         local SatVibMap = Library:Create('ImageLabel', {
             BorderSizePixel = 0;
@@ -571,11 +571,11 @@ do
             ZIndex = 18;
             Parent = HueSelectorOuter;
         });
-
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = HueSelectorInner
-        });
+--
+       -- Library:Create('UICorner', {
+         --   CornerRadius = UDim.new(0, 4),
+--Parent = HueSelectorInner
+      --  });
 
         local HueCursor = Library:Create('Frame', { 
             BackgroundColor3 = Color3.new(1, 1, 1);
@@ -603,10 +603,10 @@ do
             Parent = HueBoxOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = HueBoxInner
-        });
+        --Library:Create('UICorner', {
+           -- CornerRadius = UDim.new(0, 4),
+           -- Parent = HueBoxInner
+       -- });
 
         Library:Create('UIGradient', {
             Color = ColorSequence.new({
@@ -667,10 +667,10 @@ do
                 Parent = TransparencyBoxOuter;
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = TransparencyBoxInner
-            });
+            --Library:Create('UICorner', {
+               -- CornerRadius = UDim.new(0, 4),
+               -- Parent = TransparencyBoxInner
+           -- });
 
             Library:AddToRegistry(TransparencyBoxInner, { BorderColor3 = 'OutlineColor' });
 
@@ -724,10 +724,10 @@ do
                 Parent = ContextMenu.Container;
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = ContextMenu.Inner
-            });
+            --Library:Create('UICorner', {
+               -- CornerRadius = UDim.new(0, 4),
+               -- Parent = ContextMenu.Inner
+           -- });
 
             Library:Create('UIListLayout', {
                 Name = 'Layout',
@@ -1074,10 +1074,10 @@ do
             Parent = ToggleLabel;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = PickOuter
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = PickOuter
+        --});
 
         local PickInner = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
@@ -1088,10 +1088,10 @@ do
             Parent = PickOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = PickInner
-        });
+     --  Library:Create('UICorner', {
+          --  CornerRadius = UDim.new(0, 4),
+         --  Parent = PickInner
+       -- });
 
         local PickStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
@@ -1139,10 +1139,10 @@ do
             Parent = ModeSelectOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = ModeSelectInner
-        });
+     --  Library:Create('UICorner', {
+          --  CornerRadius = UDim.new(0, 4),
+         --  Parent = ModeSelectInner
+       -- });
 
         local ModeSelectStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
@@ -1541,10 +1541,10 @@ do
                 ZIndex = 5;
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = Outer
-            });
+            --Library:Create('UICorner', {
+            --    CornerRadius = UDim.new(0, 4),
+            --    Parent = Outer
+            --});
 
             local Inner = Library:Create('Frame', {
                 BackgroundColor3 = Library.MainColor;
@@ -1555,10 +1555,10 @@ do
                 Parent = Outer;
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = Inner
-            });
+            --Library:Create('UICorner', {
+            --    CornerRadius = UDim.new(0, 4),
+            --    Parent = Inner
+            --});
 
             local Label = Library:CreateLabel({
                 Size = UDim2.new(1, 0, 1, 0);
@@ -1724,10 +1724,10 @@ do
             Parent = Container;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = DividerOuter
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = DividerOuter
+        --});
 
         local DividerInner = Library:Create('Frame', {
             BackgroundColor3 = Library.MainColor;
@@ -1738,10 +1738,10 @@ do
             Parent = DividerOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = DividerInner
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = DividerInner
+        --});
 
         local DividerStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
@@ -1804,10 +1804,10 @@ do
             Parent = Container;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = TextBoxOuter
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = TextBoxOuter
+        --});
 
         local TextBoxInner = Library:Create('Frame', {
             BackgroundColor3 = Library.MainColor;
@@ -1818,10 +1818,10 @@ do
             Parent = TextBoxOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = TextBoxInner
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = TextBoxInner
+        --});
 
         local TextBoxStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
@@ -1999,10 +1999,10 @@ do
             Parent = Container;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = ToggleOuter
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = ToggleOuter
+        --});
 
         local ToggleStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
@@ -2023,10 +2023,10 @@ do
             Parent = ToggleOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = ToggleInner
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = ToggleInner
+        --});
 
         Library:AddToRegistry(ToggleInner, {
             BackgroundColor3 = 'MainColor';
@@ -2172,10 +2172,10 @@ do
             Parent = Container;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = SliderOuter
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = SliderOuter
+        --});
 
         local SliderStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
@@ -2196,10 +2196,10 @@ do
             Parent = SliderOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = SliderInner
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = SliderInner
+        --});
 
         Library:AddToRegistry(SliderInner, {
             BackgroundColor3 = 'MainColor';
@@ -2403,10 +2403,10 @@ do
         Library:AddToRegistry(DropdownOuter, {
             BorderColor3 = 'Black';
         })
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = DropdownOuter
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = DropdownOuter
+        --});
         local DropdownStroke = Library:Create('UIStroke', {
             Color = Library.OutlineColor;
             Thickness = 1;
@@ -2426,10 +2426,10 @@ do
             Parent = DropdownOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = DropdownInner
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = DropdownInner
+        --});
 
         Library:AddToRegistry(DropdownInner, {
             BackgroundColor3 = 'MainColor';
@@ -2523,10 +2523,10 @@ do
             Parent = ListOuter;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = ListInner
-        });
+     -- Library:Create('UICorner', {
+       --     CornerRadius = UDim.new(0, 4),
+        --    Parent = ListInner
+        --});
 
         Library:AddToRegistry(ListInner, {
             BackgroundColor3 = 'MainColor';
@@ -2619,10 +2619,10 @@ do
                     Parent = Scrolling;
                 });
 
-                Library:Create('UICorner', {
-                    CornerRadius = UDim.new(0, 4),
-                    Parent = Button
-                });
+              --  Library:Create('UICorner', {
+                --    CornerRadius = UDim.new(0, 4),
+                  --  Parent = Button
+                --});
 
                 local ButtonStroke = Library:Create('UIStroke', {
                     Color = Library.OutlineColor;
@@ -2951,10 +2951,10 @@ do
         Visible = false;
         Parent = ScreenGui;
     });
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = WatermarkOuter
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = WatermarkOuter
+    --});
 
     local WatermarkInner = Library:Create('Frame', {
         BackgroundColor3 = Library.MainColor;
@@ -2965,10 +2965,10 @@ do
         Parent = WatermarkOuter;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = WatermarkInner
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = WatermarkInner
+    --});
 
     Library:AddToRegistry(WatermarkInner, {
         BorderColor3 = 'AccentColor';
@@ -3013,15 +3013,15 @@ do
     Library.WatermarkText = WatermarkLabel;
     Library:MakeDraggable(Library.Watermark);
 
-    local WatermarkCorner = Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = Library.Watermark
-    });
+    --local WatermarkCorner = Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = Library.Watermark
+    --});
 
-    local BackgroundCorner = Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = WatermarkInner
-    });
+    -- local BackgroundCorner = Library:Create('UICorner', {
+      --  CornerRadius = UDim.new(0, 4),
+      --  Parent = WatermarkInner
+   -- });
 
     local KeybindOuter = Library:Create('Frame', {
         AnchorPoint = Vector2.new(0, 0.5);
@@ -3033,10 +3033,10 @@ do
         Parent = ScreenGui;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = KeybindOuter
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = KeybindOuter
+    --});
 
     local KeybindInner = Library:Create('Frame', {
         BackgroundColor3 = Library.MainColor;
@@ -3047,10 +3047,10 @@ do
         Parent = KeybindOuter;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = KeybindInner
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = KeybindInner
+    --});
 
     local KeybindStroke = Library:Create('UIStroke', {
         Color = Library.OutlineColor;
@@ -3147,10 +3147,10 @@ function Library:Notify(Text, Time)
         Parent = Library.NotificationArea;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = NotifyOuter
-    });
+   -- Library:Create('UICorner', {
+     --   CornerRadius = UDim.new(0, 4),
+       -- Parent = NotifyOuter
+    --});
 
     local NotifyStroke = Library:Create('UIStroke', {
         Color = Library.OutlineColor;
@@ -3171,10 +3171,10 @@ function Library:Notify(Text, Time)
         Parent = NotifyOuter;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = NotifyInner
-    });
+   -- Library:Create('UICorner', {
+     --   CornerRadius = UDim.new(0, 4),
+       -- Parent = NotifyInner
+    --});
 
     Library:AddToRegistry(NotifyInner, {
         BackgroundColor3 = 'MainColor';
@@ -3318,10 +3318,10 @@ function Library:CreateWindow(...)
         Parent = Outer;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = Inner
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = Inner
+    --});
 
     local InnerStroke = Library:Create('UIStroke', {
         Color = Library.AccentColor;
@@ -3342,10 +3342,10 @@ function Library:CreateWindow(...)
         ImageColor3 = 'AccentColor';
     });
 
-    local MainFrameCorner = Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = Inner
-    });
+    --local MainFrameCorner = Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = Inner
+    --});
 
     local WindowLabel = Library:CreateLabel({
         Position = UDim2.new(0, 0, 0, 0);
@@ -3367,10 +3367,10 @@ function Library:CreateWindow(...)
         Parent = Inner;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = MainSectionOuter
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = MainSectionOuter
+    --});
 
     local MainSectionStroke = Library:Create('UIStroke', {
         Color = Library.OutlineColor;
@@ -3397,10 +3397,10 @@ function Library:CreateWindow(...)
         Parent = MainSectionOuter;
     });
 
-    Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = MainSectionInner
-    });
+    --Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = MainSectionInner
+    --});
 
     Library:AddToRegistry(MainSectionInner, {
         BackgroundColor3 = 'BackgroundColor';
@@ -3414,10 +3414,10 @@ function Library:CreateWindow(...)
         Parent = MainSectionInner;
     });
 
-    local TabAreaCorner = Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = TabArea
-    });
+    --local TabAreaCorner = Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = TabArea
+    --});
 
     local TabListLayout = Library:Create('UIListLayout', {
         Padding = UDim.new(0, 0);
@@ -3435,10 +3435,10 @@ function Library:CreateWindow(...)
         Parent = MainSectionInner;
     });
     
-    local TabContainerCorner = Library:Create('UICorner', {
-        CornerRadius = UDim.new(0, 4),
-        Parent = TabContainer
-    });
+    --local TabContainerCorner = Library:Create('UICorner', {
+    --    CornerRadius = UDim.new(0, 4),
+    --    Parent = TabContainer
+    --});
 
     Library:AddToRegistry(TabContainer, {
         BackgroundColor3 = 'MainColor';
@@ -3481,10 +3481,10 @@ function Library:CreateWindow(...)
             Parent = TabArea;
         });
 
-        Library:Create('UICorner', {
-            CornerRadius = UDim.new(0, 4),
-            Parent = TabButton
-        });
+        --Library:Create('UICorner', {
+        --    CornerRadius = UDim.new(0, 4),
+        --    Parent = TabButton
+        --});
 
         Tab.Button = TabButton
                 local TabStroke = Library:Create('UIStroke', {
@@ -3640,10 +3640,10 @@ function Library:CreateWindow(...)
                 Parent = Info.Side == 1 and LeftSide or RightSide;
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = BoxOuter
-            });
+            --Library:Create('UICorner', {
+            --    CornerRadius = UDim.new(0, 4),
+            --    Parent = BoxOuter
+            --});
 
             Library:OnHighlight(BoxOuter, BoxOuter,
                 { BorderColor3 = 'AccentColor' },
@@ -3676,10 +3676,10 @@ function Library:CreateWindow(...)
                 { BorderColor3 = 'AccentColor' },
                 { BorderColor3 = 'OutlineColor' }
             );
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = BoxInner
-            });
+            --Library:Create('UICorner', {
+              --  CornerRadius = UDim.new(0, 4),
+               -- Parent = BoxInner
+            --});
 
             Library:AddToRegistry(BoxInner, {
                 BackgroundColor3 = 'BackgroundColor';
@@ -3708,10 +3708,10 @@ function Library:CreateWindow(...)
                 Font = Enum.Font.Gotham;
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = GroupboxLabel
-            });
+            --Library:Create('UICorner', {
+            --    CornerRadius = UDim.new(0, 4),
+            --    Parent = GroupboxLabel
+            --});
 
             local Container = Library:Create('Frame', {
                 BackgroundTransparency = 1;
@@ -3810,10 +3810,10 @@ function Library:CreateWindow(...)
                 Color = 'OutlineColor';
             });
 
-            Library:Create('UICorner', {
-                CornerRadius = UDim.new(0, 4),
-                Parent = BoxInner
-            });
+            --Library:Create('UICorner', {
+            --    CornerRadius = UDim.new(0, 4),
+            --    Parent = BoxInner
+            --});
 
             Library:AddToRegistry(BoxInner, {
                 BackgroundColor3 = 'BackgroundColor';
@@ -3857,10 +3857,10 @@ function Library:CreateWindow(...)
                     Parent = TabboxButtons;
                 });
 
-                Library:Create('UICorner', {
-                    CornerRadius = UDim.new(0, 4),
-                    Parent = Button
-                });
+                --Library:Create('UICorner', {
+                --    CornerRadius = UDim.new(0, 4),
+                --    Parent = Button
+                --});
 
                 local ButtonStroke = Library:Create('UIStroke', {
                     Color = Library.OutlineColor;
