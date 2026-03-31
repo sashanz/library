@@ -2952,12 +2952,6 @@ do
         Parent = ScreenGui;
     });
 
-    local Hue2 = 0
-Library:GiveSignal(RunService.RenderStepped:Connect(function()
-    Hue2 = Hue2 + 0.005
-    if Hue2 > 1 then Hue2 = 0 end
-    WatermarkStroke.Color = Color3.fromHSV(Hue2, 1, 1)
-end))
     --Library:Create('UICorner', {
     --    CornerRadius = UDim.new(0, 4),
     --    Parent = WatermarkOuter
