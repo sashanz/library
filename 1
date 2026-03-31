@@ -3321,10 +3321,103 @@ function Library:CreateWindow(...)
         Parent = Outer;
     });
 
+   -- Library:Create('UICorner', {
+     --   CornerRadius = UDim.new(0, 4),
+       -- Parent = Inner
+    --});
+-- Создаем ESP Preview окно
+local ESPPreview = Library:Create('Frame', {
+    Name = "ESPPreview",
+    BackgroundColor3 = Library.MainColor,
+    BorderColor3 = Library.OutlineColor,
+    BorderMode = Enum.BorderMode.Inset,
+    Position = UDim2.new(0, 10, 0.5, -162), -- Справа по центру
+    Size = UDim2.new(0, 300, 0, 325),
+    Visible = false,
+    ZIndex = 20,
+    Parent = ScreenGui
+});
+
+Library:Create('UICorner', {
+    CornerRadius = UDim.new(0, 4),
+    Parent = ESPPreview
+});
+
+-- Заголовок
+local Title = Library:CreateLabel({
+    Size = UDim2.new(1, 0, 0, 20),
+    Text = "ESP Preview",
+    TextSize = 14,
+    ZIndex = 21,
+    Parent = ESPPreview
+});
+
+-- Контейнер для элементов
+local ESPContainer = Library:Create('Frame', {
+    BackgroundTransparency = 1,
+    Position = UDim2.new(0, 5, 0, 25),
+    Size = UDim2.new(1, -10, 1, -30),
+    ZIndex = 21,
+    Parent = ESPPreview
+});
+
+Library:Create('UIListLayout', {
+    Padding = UDim.new(0, 4),
+    FillDirection = Enum.FillDirection.Vertical,
+    Parent = ESPContainer
+});
+
+-- Функция для добавления элементов в ESP Preview
+function ESPPreview:AddItem(name, defaultColor)
+    local Item = Library:Create('Frame', {
+        BackgroundColor3 = Library.BackgroundColor,
+        BorderColor3 = Library.OutlineColor,
+        Size = UDim2.new(1, 0, 0, 25),
+        ZIndex = 22,
+        Parent = ESPContainer
+    });
+    
     Library:Create('UICorner', {
         CornerRadius = UDim.new(0, 4),
-        Parent = Inner
+        Parent = Item
     });
+    
+    local Label = Library:CreateLabel({
+        Size = UDim2.new(0.7, -5, 1, 0),
+        Position = UDim2.new(0, 5, 0, 0),
+        Text = name,
+        TextSize = 13,
+        TextXAlignment = Enum.TextXAlignment.Left,
+        ZIndex = 23,
+        Parent = Item
+    });
+    
+    local ColorDisplay = Library:Create('Frame', {
+        BackgroundColor3 = defaultColor or Library.AccentColor,
+        Size = UDim2.new(0, 20, 0, 15),
+        Position = UDim2.new(0.7, 0, 0.5, -7),
+        ZIndex = 23,
+        Parent = Item
+    });
+    
+    Library:Create('UICorner', {
+        CornerRadius = UDim.new(0, 3),
+        Parent = ColorDisplay
+    });
+    
+    return {
+        SetColor = function(color)
+            ColorDisplay.BackgroundColor3 = color
+        end,
+        SetText = function(text)
+            Label.Text = text
+        end
+    }
+end
+
+-- Сделать перетаскиваемым
+Library:MakeDraggable(ESPPreview, 20);
+
 
     local InnerStroke = Library:Create('UIStroke', {
         Color = Library.AccentColor;
