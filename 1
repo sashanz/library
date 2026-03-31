@@ -19,103 +19,6 @@ local ScreenGui = Instance.new('ScreenGui');
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 ScreenGui.Parent = CoreGui;
 
--- ============ ESP PREVIEW ============
--- Создаем ESP Preview окно
-local ESPPreview = Library:Create('Frame', {
-    Name = "ESPPreview",
-    BackgroundColor3 = Library.MainColor,
-    BorderColor3 = Library.OutlineColor,
-    BorderMode = Enum.BorderMode.Inset,
-    Position = UDim2.new(0, 10, 0.5, -162),
-    Size = UDim2.new(0, 300, 0, 325),
-    Visible = false,
-    ZIndex = 20,
-    Parent = ScreenGui
-});
-
--- Заголовок
-local Title = Library:CreateLabel({
-    Size = UDim2.new(1, 0, 0, 20),
-    Text = "ESP Preview",
-    TextSize = 14,
-    ZIndex = 21,
-    Parent = ESPPreview
-});
-
--- Контейнер для элементов
-local ESPContainer = Library:Create('Frame', {
-    BackgroundTransparency = 1,
-    Position = UDim2.new(0, 5, 0, 25),
-    Size = UDim2.new(1, -10, 1, -30),
-    ZIndex = 21,
-    Parent = ESPPreview
-});
-
-Library:Create('UIListLayout', {
-    Padding = UDim.new(0, 4),
-    FillDirection = Enum.FillDirection.Vertical,
-    Parent = ESPContainer
-});
-
--- Функция для добавления элементов в ESP Preview
-local function AddESPItem(name, defaultColor)
-    local Item = Library:Create('Frame', {
-        BackgroundColor3 = Library.BackgroundColor,
-        BorderColor3 = Library.OutlineColor,
-        Size = UDim2.new(1, 0, 0, 25),
-        ZIndex = 22,
-        Parent = ESPContainer
-    });
-    
-    local Label = Library:CreateLabel({
-        Size = UDim2.new(0.7, -5, 1, 0),
-        Position = UDim2.new(0, 5, 0, 0),
-        Text = name,
-        TextSize = 13,
-        TextXAlignment = Enum.TextXAlignment.Left,
-        ZIndex = 23,
-        Parent = Item
-    });
-    
-    local ColorDisplay = Library:Create('Frame', {
-        BackgroundColor3 = defaultColor or Library.AccentColor,
-        Size = UDim2.new(0, 20, 0, 15),
-        Position = UDim2.new(0.7, 0, 0.5, -7),
-        ZIndex = 23,
-        Parent = Item
-    });
-    
-    return {
-        SetColor = function(color)
-            ColorDisplay.BackgroundColor3 = color
-        end,
-        SetText = function(text)
-            Label.Text = text
-        end,
-        SetVisible = function(visible)
-            Item.Visible = visible
-        end
-    }
-end
-
--- Сделать перетаскиваемым
-Library:MakeDraggable(ESPPreview, 20);
-
--- Функции для управления ESPPreview
-local function ShowESPPreview()
-    ESPPreview.Visible = true
-end
-
-local function HideESPPreview()
-    ESPPreview.Visible = false
-end
-
-local function ToggleESPPreview()
-    ESPPreview.Visible = not ESPPreview.Visible
-end
--- ============ КОНЕЦ ESP PREVIEW ============
-
-
 local Toggles = {};
 local Options = {};
 
@@ -3358,7 +3261,7 @@ function Library:CreateWindow(...)
     if type(Config.MenuFadeTime) ~= 'number' then Config.MenuFadeTime = 0.2 end
 
     if typeof(Config.Position) ~= 'UDim2' then Config.Position = UDim2.fromOffset(175, 50) end
-    if type(Config.Size) ~= 'UDim2' then Config.Size = UDim2.fromOffset(700, 570) end
+    if type(Config.Size) ~= 'UDim2' then Config.Size = UDim2.fromOffset(600, 570) end
 
     if Config.Center then
         Config.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -3392,19 +3295,16 @@ function Library:CreateWindow(...)
         Config.Size.Y.Offset + 57
     );
     local Image = Library:Create('ImageLabel', {
-        AnchorPoint = Config.AnchorPoint, 
-        BackgroundTransparency = 1,
-        Position = Config.Position,
-        Size = newSize,
-        Image = 'rbxassetid://93592101826297',
-        ImageColor3 = Library.AccentColor,
-        ImageTransparency = 0,
-        ZIndex = 1,
-        Parent = Outer,
-        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-        BorderColor3 = Color3.fromRGB(0, 0, 0),
-        BorderSizePixel = 0,
-    });
+    AnchorPoint = Vector2.new(0, 0),  -- Левая верхняя точка
+    Position = UDim2.new(0, 0, 0, 0), -- Привязать к левому верхнему углу Outer
+    Size = UDim2.new(1, 0, 1, 0),     -- Растянуть на весь Outer
+    BackgroundTransparency = 1,
+    Image = 'rbxassetid://119947240567282',
+    ImageColor3 = Library.AccentColor,
+    ImageTransparency = 0,
+    ZIndex = 1,
+    Parent = Outer,
+});
 
     Library:MakeDraggable(Outer, 25);
 
@@ -3418,12 +3318,10 @@ function Library:CreateWindow(...)
         Parent = Outer;
     });
 
-   -- Library:Create('UICorner', {
-     --   CornerRadius = UDim.new(0, 4),
-       -- Parent = Inner
-    --});
-
-    
+    Library:Create('UICorner', {
+        CornerRadius = UDim.new(0, 4),
+        Parent = Inner
+    });
 
     local InnerStroke = Library:Create('UIStroke', {
         Color = Library.AccentColor;
